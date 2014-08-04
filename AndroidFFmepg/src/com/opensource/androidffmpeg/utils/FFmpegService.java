@@ -17,12 +17,6 @@
  */	
 package com.opensource.androidffmpeg.utils;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;

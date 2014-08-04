@@ -24,9 +24,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
-import android.os.Message;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
@@ -207,23 +205,6 @@ public class MainActivity extends Activity implements OnClickListener {
 			mService = null;
 		}
 		
-	}
-	
-	private final class MainHandler extends Handler {
-		@Override
-		public void handleMessage(Message msg) {
-			switch (msg.what) {
-			case 0:
-				
-				break;
-			case 1:
-				
-				break;
-			default:
-				break;
-			}
-			super.handleMessage(msg);
-		}
 	}
 	
 }
