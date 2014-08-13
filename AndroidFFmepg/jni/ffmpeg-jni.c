@@ -553,7 +553,7 @@ JNIEXPORT jint JNICALL Java_com_opensource_androidffmpeg_utils_FFmpegTool_ffmpeg
 	int argc = (*env)->GetArrayLength(env, args);
 	char *argv[argc];
 	int i = 0;
-	for(i = 0; i < argc; i++) { //循环将传入的文件写入清单列表中
+	for(i = 0; i < argc; i++) { //循环获取每一个参数
 		jstring str = (*env)->GetObjectArrayElement(env, args, i);
 		char const * arg = (*env)->GetStringUTFChars(env, str, 0);
 		argv[i] = arg;
@@ -1073,14 +1073,14 @@ JNIEXPORT jint JNICALL Java_com_opensource_androidffmpeg_utils_FFmpegTool_ffmpeg
 //JNIEXPORT jint JNICALL Java_com_cn21_vgo_camcorder_utils_FFmpegTool_ffmpeg
 //  (JNIEnv * env, jclass cls, jobjectArray args) {
 //	int argc = (*env)->GetArrayLength(env, args);
-//	char *argv[argc];
-//	int i = 0;
-//	for(i = 0; i < argc; i++) { //循环将传入的文件写入清单列表中
+//		char *argv[argc];
+//		int i = 0;
+//		for(i = 0; i < argc; i++) { //循环获取每一个参数
 //			jstring str = (*env)->GetObjectArrayElement(env, args, i);
 //			char const * arg = (*env)->GetStringUTFChars(env, str, 0);
 //			argv[i] = arg;
-//	}
-//	return main(argc, argv);
+//		}
+//		return main(argc, argv);
 //}
 
 /**********************************************************************************************************************************************/
@@ -1594,12 +1594,12 @@ JNIEXPORT jint JNICALL Java_com_opensource_androidffmpeg_utils_FFmpegTool_ffmpeg
 //JNIEXPORT jint JNICALL Java_com_opensource_camcorder_utils_FFmpegTool_ffmpeg
 //  (JNIEnv * env, jclass cls, jobjectArray args) {
 //	int argc = (*env)->GetArrayLength(env, args);
-//	char *argv[argc];
-//	int i = 0;
-//	for(i = 0; i < argc; i++) { //循环将传入的文件写入清单列表中
+//		char *argv[argc];
+//		int i = 0;
+//		for(i = 0; i < argc; i++) { //循环获取每一个参数
 //			jstring str = (*env)->GetObjectArrayElement(env, args, i);
 //			char const * arg = (*env)->GetStringUTFChars(env, str, 0);
 //			argv[i] = arg;
-//	}
-//	return main(argc, argv);
+//		}
+//		return main(argc, argv);
 //}
