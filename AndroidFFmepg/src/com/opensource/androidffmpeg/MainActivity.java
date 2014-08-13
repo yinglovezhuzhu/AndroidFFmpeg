@@ -80,8 +80,6 @@ public class MainActivity extends Activity {
 					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 3:
-//					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ADD_WATERMARK), Service.BIND_AUTO_CREATE);
-					
 //					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
 //							"/mnt/sdcard/fb.png", "-filter_complex", 
 //							"overlay=(W-w)/2:(H-h)/2", "-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1000k", "-s", "864x480", 
@@ -93,10 +91,15 @@ public class MainActivity extends Activity {
 //					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-vf", 
 //							"movie=/mnt/sdcard/post.png,scale=480x480, rotate=angle=3*PI/2[wm],[in][wm]overlay=(W-w)/2:(H-h)/2, crop=w=480:h=480[out]", "-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1000k", "-s", "864x480", 
 //							"-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_watermark.mp4"};
+//					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
+//							"/mnt/sdcard/record.png", "-filter_complex", 
+//							"[1:v]scale=480x480, rotate=3*PI/2[wm];[0:v][wm]overlay=x=(W-w)/2:y=(H-h)/2,crop=x=(in_w-480)/2:y=(in_h-480)/2:w=480:h=480, rotate=PI/2[out]", 
+//							"-map", "[out]", "-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1000k", "-s", "480x480", 
+//							"-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_watermark.mp4"};
 					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
 							"/mnt/sdcard/record.png", "-filter_complex", 
-							"[1:v]scale=480x480, rotate=3*PI/2[wm];[0:v][wm]overlay=x=(W-w)/2:y=(H-h)/2,crop=x=(in_w-480)/2:y=(in_h-480)/2:w=480:h=480, rotate=PI/2[out]", 
-							"-map", "[out]", "-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1000k", "-s", "480x480", 
+							"[1]scale=480x480, rotate=3*PI/2[wm];[0][wm]overlay=x=(W-w)/2:y=(H-h)/2,crop=x=(in_w-480)/2:y=(in_h-480)/2:w=480:h=480, rotate=PI/2", 
+							"-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1000k", "-s", "480x480", 
 							"-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_watermark.mp4"};
 					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					
@@ -123,9 +126,12 @@ public class MainActivity extends Activity {
 //					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
 //							"/mnt/sdcard/music_cut.mp3", "-c:v", "mpeg4", "-c:a", "ac3", "-c:s", "copy", "-b:v", "1024k", 
 //							"-b:a", "128k", "-ac", "1", "-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_add_audio.mp4"};
+//					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
+//							"/mnt/sdcard/music_cut.mp3", "-c:v", "mpeg4", "-c:a", "ac3", "-c:s", "copy", "-b:v", "1024k", 
+//							"-ac", "1", "-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_add_audio.mp4"};
 					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
-							"/mnt/sdcard/music_cut.mp3", "-c:v", "mpeg4", "-c:a", "ac3", "-c:s", "copy", "-b:v", "1024k", 
-							"-ac", "1", "-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_add_audio.mp4"};
+							"/mnt/sdcard/music_cut.mp3", "-c", "copy", "-map", "0:v", "-map", "1:a", 
+							"-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_add_audio.mp4"};
 					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 7:
