@@ -32,21 +32,6 @@ public class FFmpegService extends Service {
 	
 	private static final String TAG = "FFmpegService";
 	
-	public static final int CMD_ALL 				= -1;
-	
-	/** 合并视频 */
-	public static final int CMD_MERGE_VIDEO 	= 0;
-	/** 裁剪视频 **/
-	public static final int CMD_CUT_VIDEO		= 1;
-	/** 添加水印 */
-	public static final int CMD_ADD_WATERMARK	= 2;
-	/**  */
-	public static final int CMD_REMOVE_AUDIO	= 3;
-	/**  */
-	public static final int CMD_FETCH_AUDIO	= 4;
-	/**  */
-	public static final int CMD_ADD_AUDIO 		= 5;
-	
 	private final LocalBinder mBinder = new LocalBinder();
 	
 	@Override

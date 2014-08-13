@@ -71,10 +71,13 @@ public class MainActivity extends Activity {
 					FFmpegTool.testLog();
 					break;
 				case 1:
-					bindService(intent, new LocalServiceConnection(0), Service.BIND_AUTO_CREATE);
+					args = new String [] {};
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 2:
-					bindService(intent, new LocalServiceConnection(1), Service.BIND_AUTO_CREATE);
+					args = new String [] {"ffmpeg", "-ss", "00:00:00", "-t", "00:00:10", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", 
+							"-acodec", "copy", "-vcodec", "copy", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_cut.mp4"};
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 3:
 //					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ADD_WATERMARK), Service.BIND_AUTO_CREATE);
@@ -95,14 +98,24 @@ public class MainActivity extends Activity {
 							"[1:v]scale=480x480, rotate=3*PI/2[wm];[0:v][wm]overlay=x=(W-w)/2:y=(H-h)/2,crop=x=(in_w-480)/2:y=(in_h-480)/2:w=480:h=480, rotate=PI/2[out]", 
 							"-map", "[out]", "-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1000k", "-s", "480x480", 
 							"-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_watermark.mp4"};
-					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ALL, args), Service.BIND_AUTO_CREATE);
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					
 					break;
 				case 4:
-					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_REMOVE_AUDIO), Service.BIND_AUTO_CREATE);
+//					args = new String [] {"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", 
+//							"-s", "854x480", "-f", "mp4", "-an","/mnt/sdcard/DCIM/Camera/VID_20140811_180204_no_audio.mp4"};
+					args = new String [] {"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-map", "0:v", 
+							"-f", "mp4", 
+							"/mnt/sdcard/DCIM/Camera/VID_20140811_180204_no_audio.mp4"};
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 5:
-					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_FETCH_AUDIO), Service.BIND_AUTO_CREATE);
+//					args = new String [] {"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", 
+//							"-f", "wav", "-vn", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_audio.wav"};
+					args = new String [] {"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", 
+							"-map", "0:a", "-f", "wav", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_audio.wav"};
+
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 6:
 //					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ADD_AUDIO), Service.BIND_AUTO_CREATE);
@@ -113,7 +126,7 @@ public class MainActivity extends Activity {
 					args = new String []{"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", "-i", 
 							"/mnt/sdcard/music_cut.mp3", "-c:v", "mpeg4", "-c:a", "ac3", "-c:s", "copy", "-b:v", "1024k", 
 							"-ac", "1", "-f", "mp4", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_add_audio.mp4"};
-					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ALL, args), Service.BIND_AUTO_CREATE);
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 7:
 //					./ffmpeg -y -i /home/xiaoying/v5.3gp -filter_complex 
@@ -124,7 +137,7 @@ public class MainActivity extends Activity {
 							"colorchannelmixer=rr=.5:rg=.5:rb=.5:gr=.5:gg=.5:gb=.5:br=.5:bg=.5:bb=.5", 
 							 "-c:v", "mpeg4", "-c:a", "copy", "-b:v", "1024k", "-s", "864x480", "-f", "mp4", 
 							 "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_black_white.mp4"};
-					bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ALL, args), Service.BIND_AUTO_CREATE);
+					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 8:
 					break;
@@ -136,53 +149,13 @@ public class MainActivity extends Activity {
 		
 	}
 	
-//	@Override
-//	public void onClick(View v) {
-//		Intent intent = new Intent(MainActivity.this, FFmpegService.class);
-//		intent.putExtra("AAA", "BBBB");
-//		switch (v.getId()) {
-//		case R.id.btn_test:
-//			FFmpegTool.testLog();
-//			break;
-//		case R.id.btn_merge:
-////			Log.i(TAG, "Merge Video Result: " + FFmpegTool.mergeVideo("/storage/extSdCard/", 
-////					"/storage/extSdCard/merge_out.mp4", 
-////					"/storage/extSdCard/DCIM/Camera/20140709_180929.mp4", "/storage/extSdCard/DCIM/Camera/20140709_180944.mp4"));
-////			Log.i(TAG, "Merge Video Result: " + FFmpegTool.mergeVideo("/sdcard/DCIM/Camera/", 
-////					"/sdcard/DCIM/Camera/merge_out.3gp", 
-////					"/sdcard/DCIM/Camera/VID_20140709_171222.3gp", "/sdcard/DCIM/Camera/VID_20140709_171239.3gp"));
-//			bindService(intent, new LocalServiceConnection(0), Service.BIND_AUTO_CREATE);
-//			
-//			break;
-//		case R.id.btn_cut:
-//			bindService(intent, new LocalServiceConnection(1), Service.BIND_AUTO_CREATE);
-//			break;
-//		case R.id.btn_water:
-//			bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ADD_WATERMARK), Service.BIND_AUTO_CREATE);
-//			break;
-//		case R.id.btn_remove_audio:
-//			bindService(intent, new LocalServiceConnection(FFmpegService.CMD_REMOVE_AUDIO), Service.BIND_AUTO_CREATE);
-//			break;
-//		case R.id.btn_fetch_audio:
-//			bindService(intent, new LocalServiceConnection(FFmpegService.CMD_FETCH_AUDIO), Service.BIND_AUTO_CREATE);
-//			break;
-//		case R.id.btn_add_audio:
-//			bindService(intent, new LocalServiceConnection(FFmpegService.CMD_ADD_AUDIO), Service.BIND_AUTO_CREATE);
-//			break;
-//		default:
-//			break;
-//		}
-//	}
-	
 	private IFFmpegService mService;
 	
 	private final class LocalServiceConnection implements ServiceConnection {
 		
-		private int mmCommand;
 		private String [] mmArgs;
 		
-		private LocalServiceConnection(int command, String ...args) {
-			this.mmCommand = command;
+		private LocalServiceConnection(String ...args) {
 			this.mmArgs = args;
 		}
 		
@@ -191,97 +164,16 @@ public class MainActivity extends Activity {
 		public void onServiceConnected(ComponentName name, IBinder service) {
 			// TODO Auto-generated method stub
 			mService = IFFmpegService.Stub.asInterface(service);
-			switch (mmCommand) {
-			case FFmpegService.CMD_MERGE_VIDEO:
-				try {
-//					int ret = mService.mergeVideo("/sdcard/DCIM/Camera/", 
-//							"/sdcard/DCIM/Camera/merge_out.3gp", 
-//							new String [] {"/sdcard/DCIM/Camera/VID_20140709_171222.3gp", "/sdcard/DCIM/Camera/VID_20140709_171239.3gp"});
-//					int ret = mService.mergeVideo("/sdcard/DCIM/Camera/", 
-//							"/sdcard/DCIM/Camera/merge_out.3gp", 
-//							new String [] {"/sdcard/DCIM/Camera/VID_19700110_122102.3gp", "/sdcard/DCIM/Camera/VID_20140520_181236.3gp"});
-//					int ret = mService.mergeVideo("/sdcard/DCIM/Camera/", 
-//							"/sdcard/DCIM/Camera/merge_out.3gp", 
-//							new String [] {"/sdcard/DCIM/Camera/VID_19700110_122102.3gp", "/sdcard/DCIM/Camera/VID_20140520_181236.3gp"});
-					int ret = mService.mergeVideo("/mnt/sdcard/DCIM/Camera/", 
-							"/mnt/sdcard/DCIM/Camera/merge_out.mp4", 
-							new String [] {"/mnt/sdcard/DCIM/Camera/VID_20140704_103157.mp4", 
-							"/mnt/sdcard/DCIM/Camera/VID_20140708_203811.mp4"});
-					System.out.println("Merge video result:++>>> " + ret);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+			if(null == mService) {
+				Log.e(TAG, "Failed connect to service");
+				return;
+			}
+			try {
+				int ret = mService.ffmpeg(mmArgs);
+				Log.i(TAG, "FFmpeg result========>>>>>> " + ret);
 				unbindService(this);
-				break;
-			case FFmpegService.CMD_CUT_VIDEO:
-				try {
-//					int ret = mService.cutVideo("/sdcard/DCIM/Camera/VID_20140709_171222.3gp", 
-//							"/sdcard/DCIM/Camera/cut_out.mp4", "00:00:00", "00:00:03");
-					int ret = mService.cutVideo("/sdcard/DCIM/Camera/VID_19700110_122102.3gp", 
-							"00:00:00", "00:00:03", "/sdcard/DCIM/Camera/cut_out.3gp");
-					System.out.println("Cut video result:++>>> " + ret);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				unbindService(this);
-				break;
-			case FFmpegService.CMD_ADD_WATERMARK:
-				try {
-//					int ret = mService.addWaterMark("/sdcard/DCIM/Camera/VID_19700110_122102.3gp", 
-//							"/sdcard/fb.png", 0, 10, 10, "/sdcard/DCIM/Camera/watermark_out.mp4", "mp4");
-					int ret = mService.addWaterMark("/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", 
-							"/mnt/sdcard/fb.png", 4, 10, 10, "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_watermark.mp4", "mp4");
-					System.out.println("Add watermark result:++>>> " + ret);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				unbindService(this);
-				break;
-			case FFmpegService.CMD_REMOVE_AUDIO:
-				try {
-					int ret = mService.removeAudio("/sdcard/DCIM/Camera/VID_19700110_122102.3gp", "/sdcard/DCIM/Camera/no_auido.3gp");
-					System.out.println("Remvoe audio result:++>>> " + ret);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				unbindService(this);
-				break;
-			case FFmpegService.CMD_FETCH_AUDIO:
-				try {
-					int ret = mService.fetchAudio("/sdcard/DCIM/Camera/VID_19700110_122102.3gp", "/sdcard/DCIM/Camera/fetch_audio.wav", "wav");
-					System.out.println("Fetch audio result:+++>>> " + ret);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				unbindService(this);
-				break;
-			case FFmpegService.CMD_ADD_AUDIO:
-				try {
-					int ret = mService.addAudio("/sdcard/DCIM/Camera/VID_19700110_122102.3gp", 
-							"/sdcard/music_cut.mp3", "/sdcard/DCIM/Camera/add_audio_out.3gp", "mpeg4");
-					System.out.println("Add audio result:+++>>> " + ret);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				unbindService(this);
-				break;
-			case FFmpegService.CMD_ALL:
-				try {
-					int ret = mService.ffmpeg(mmArgs);
-					Log.i(TAG, "FFmpeg result========>>>>>> " + ret);
-					unbindService(this);
-				} catch (RemoteException e) {
-					e.printStackTrace();
-				}
-				break;
-			default:
-				break;
+			} catch (RemoteException e) {
+				e.printStackTrace();
 			}
 		}
 
