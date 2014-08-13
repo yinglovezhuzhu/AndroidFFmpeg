@@ -1,53 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-	<LinearLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:orientation="vertical" >
-	    <Button 
-	        android:id="@+id/btn_test"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Test"/>
-	    <Button 
-	        android:id="@+id/btn_merge"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Merge Video"/>
-	    <Button 
-	        android:id="@+id/btn_cut"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Cut Video"/>
-	    <Button 
-	        android:id="@+id/btn_water"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Watermark"/>
-	    <Button 
-	        android:id="@+id/btn_remove_audio"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Remove audio"/>
-	    <Button 
-	        android:id="@+id/btn_fetch_audio"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Fetch audio"/>
-	    <Button 
-	        android:id="@+id/btn_add_audio"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="8dip"
-	        android:text="Add audio"/>
+<!-- <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--     android:layout_width="match_parent" -->
+<!--     android:layout_height="wrap_content"> -->
+<!-- 	<LinearLayout  -->
+<!-- 	    android:layout_width="match_parent" -->
+<!-- 	    android:layout_height="match_parent" -->
+<!-- 	    android:orientation="vertical" > -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_test" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Test"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_merge" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Merge Video"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_cut" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Cut Video"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_water" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Watermark"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_remove_audio" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Remove audio"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_fetch_audio" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Fetch audio"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_add_audio" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Add audio"/> -->
+<!-- 	    <Button  -->
+<!-- 	        android:id="@+id/btn_black_white" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_margin="8dip" -->
+<!-- 	        android:text="Black White"/> -->
 	    
-	</LinearLayout>
-</ScrollView>
+<!-- 	</LinearLayout> -->
+<!-- </ScrollView> -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView 
+        android:id="@+id/lv_option_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+    </ListView>
+</LinearLayout>

@@ -1,5 +1,5 @@
-/home/xiaoying/workspace/AndroidFFmepg/obj/local/armeabi/objs/ffmpeg-jni/ffmpeg-jni.o: \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg-jni.c \
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/obj/local/armeabi/objs/ffmpeg-jni/ffmpeg-jni.o: \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg-jni.c \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/android/log.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/ctype.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
@@ -38,59 +38,59 @@
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/alloca.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/strings.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/memory.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/cmdutils.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/config.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/common.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/cmdutils.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/config.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/common.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/inttypes.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/math.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/version.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/macros.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/avconfig.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/error.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/mathematics.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/intfloat.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/log.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/old_pix_fmts.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/cpu.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/channel_layout.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/frame.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/log.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/version.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/version.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/old_codec_ids.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavfilter/avfilter.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavfilter/version.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavformat/avformat.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/version.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/macros.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/avconfig.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/error.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/mathematics.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/intfloat.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/log.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/old_pix_fmts.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/cpu.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/channel_layout.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/frame.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/log.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/version.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/version.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/old_codec_ids.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavfilter/avfilter.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavfilter/version.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavformat/avformat.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/time.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/sys/time.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/linux/time.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/asm/siginfo.h \
  /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/asm-generic/siginfo.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavformat/avio.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/common.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavformat/version.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libswscale/swscale.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libswscale/version.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/com_opensource_androidffmpeg_utils_FFmpegTool.h \
- /home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeginentry.h
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavformat/avio.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/common.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavformat/version.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libswscale/swscale.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libswscale/version.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/com_opensource_androidffmpeg_utils_FFmpegTool.h \
+ /home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeginentry.h
 
 /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/android/log.h:
 
@@ -168,85 +168,85 @@
 
 /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/cmdutils.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/cmdutils.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/config.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/config.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/common.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/common.h:
 
 /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/inttypes.h:
 
 /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/math.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/version.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/version.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/macros.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/macros.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/avconfig.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/avconfig.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/error.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/error.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/mathematics.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/mathematics.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/intfloat.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/intfloat.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/log.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/log.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/old_pix_fmts.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/old_pix_fmts.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/attributes.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/avutil.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/cpu.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/cpu.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/channel_layout.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/channel_layout.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/frame.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/frame.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/buffer.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/dict.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/samplefmt.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/log.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/log.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/pixfmt.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/rational.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/version.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/version.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/version.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/version.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/mem.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/old_codec_ids.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/old_codec_ids.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavfilter/avfilter.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavfilter/avfilter.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavfilter/version.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavfilter/version.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavformat/avformat.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavformat/avformat.h:
 
 /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/time.h:
 
@@ -258,18 +258,18 @@
 
 /home/xiaoying/Android/android-ndk-r9d/platforms/android-8/arch-arm/usr/include/asm-generic/siginfo.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavcodec/avcodec.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavformat/avio.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavformat/avio.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavutil/common.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavutil/common.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libavformat/version.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libavformat/version.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libswscale/swscale.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libswscale/swscale.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeg/libswscale/version.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeg/libswscale/version.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/com_opensource_androidffmpeg_utils_FFmpegTool.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/com_opensource_androidffmpeg_utils_FFmpegTool.h:
 
-/home/xiaoying/workspace/AndroidFFmepg/jni/ffmpeginentry.h:
+/home/xiaoying/git/AndroidFFmpeg/AndroidFFmepg/jni/ffmpeginentry.h:

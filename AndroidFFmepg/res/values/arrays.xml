@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="option_list">
+        <item>Test Log</item>
+        <item>Merge Video</item>
+        <item>Cut Video</item>
+        <item>Water Mark</item>
+        <item>Remove audio</item>
+        <item>Fetch audio</item>
+        <item>Add audio</item>
+        <item>Black white</item>
+    </string-array>
+</resources>

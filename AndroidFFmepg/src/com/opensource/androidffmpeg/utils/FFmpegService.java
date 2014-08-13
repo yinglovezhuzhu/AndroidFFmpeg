@@ -32,6 +32,8 @@ public class FFmpegService extends Service {
 	
 	private static final String TAG = "FFmpegService";
 	
+	public static final int CMD_ALL 				= -1;
+	
 	/** 合并视频 */
 	public static final int CMD_MERGE_VIDEO 	= 0;
 	/** 裁剪视频 **/
@@ -156,5 +158,13 @@ public class FFmpegService extends Service {
 			return ret;
 		}
 		
+		
+		@Override
+		public int ffmpeg(String[] args) throws RemoteException {
+			int ret = Integer.MIN_VALUE;
+			ret = FFmpegTool.ffmpeg(args);
+			stopSelf();
+			return ret;
+		}
 	}
 }

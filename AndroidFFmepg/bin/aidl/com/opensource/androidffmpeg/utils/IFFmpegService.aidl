@@ -35,4 +35,6 @@ interface IFFmpegService {
 	int fetchAudio(String input, String output, String format);
 	
 	int addAudio(String video, String audio, String output, String format);
+	
+	int ffmpeg(in String [] args);
 }
