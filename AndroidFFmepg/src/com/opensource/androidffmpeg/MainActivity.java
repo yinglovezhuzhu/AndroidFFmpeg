@@ -71,7 +71,8 @@ public class MainActivity extends Activity {
 					FFmpegTool.testLog();
 					break;
 				case 1:
-					args = new String [] {};
+					args = new String [] {"ffmpeg", "-y", "-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204.mp4", 
+							"-i", "/mnt/sdcard/DCIM/Camera/VID_20140811_180204_watermark.mp4", };
 					bindService(intent, new LocalServiceConnection(args), Service.BIND_AUTO_CREATE);
 					break;
 				case 2:
