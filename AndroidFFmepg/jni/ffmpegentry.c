@@ -553,7 +553,7 @@ void assert_avoptions(AVDictionary *m)
 
 static void abort_codec_experimental(AVCodec *c, int encoder)
 {
-	LOGE("ffmpegentry in line:556 ==> abort_codec_experimental, encoder-->%d", encoder);
+	LOGE("abort_codec_experimental, encoder-->%d", encoder);
     exit_program(1);
 }
 
@@ -2464,7 +2464,6 @@ static int transcode_init(void)
     char error[1024];
     int want_sdp = 1;
 
-    LOGI("ffmpegentry in line:2467 transcode_init()-->>for (i = 0; i < nb_filtergraphs; i++)");
     for (i = 0; i < nb_filtergraphs; i++) {
         FilterGraph *fg = filtergraphs[i];
         for (j = 0; j < fg->nb_outputs; j++) {
@@ -2481,7 +2480,6 @@ static int transcode_init(void)
     }
 
     /* init framerate emulation */
-    LOGI("ffmpegentry in line:2483 transcode_init()-->>for (i = 0; i < nb_input_files; i++)==>>init framerate emulation");
     for (i = 0; i < nb_input_files; i++) {
         InputFile *ifile = input_files[i];
         if (ifile->rate_emu)
@@ -2490,7 +2488,6 @@ static int transcode_init(void)
     }
 
     /* output stream init */
-    LOGI("ffmpegentry in line:2492 transcode_init()-->>for (i = 0; i < nb_output_files; i++)** output stream init **");
     for (i = 0; i < nb_output_files; i++) {
         oc = output_files[i]->ctx;
         if (!oc->nb_streams && !(oc->oformat->flags & AVFMT_NOSTREAMS)) {
@@ -2501,15 +2498,12 @@ static int transcode_init(void)
     }
 
     /* init complex filtergraphs */
-    LOGI("ffmpegentry in line:2503 transcode_init()-->>for (i = 0; i < nb_filtergraphs; i++)==>>** init complex filtergraphs **");
     for (i = 0; i < nb_filtergraphs; i++)
         if ((ret = avfilter_graph_config(filtergraphs[i]->graph, NULL)) < 0) {
-        	LOGE("ffmpegentry in line:2502, Error avfilter_graph_config(filtergraphs[i]->graph, NULL)) ret====>>>%d", ret);
             return ret;
         }
 
     /* for each output stream, we compute the right encoding parameters */
-    LOGI("ffmpegentry in line:2511 transcode_init()-->>for (i = 0; i < nb_output_streams; i++)==>>** for each output stream, we compute the right encoding parameters **");
     for (i = 0; i < nb_output_streams; i++) {
         AVCodecContext *enc_ctx;
         AVCodecContext *dec_ctx = NULL;
@@ -2848,13 +2842,11 @@ static int transcode_init(void)
     }
 
     /* open each encoder */
-    LOGI("ffmpegentry in line:2850 transcode_init()-->>for (i = 0; i < nb_output_streams; i++)==>>** open each encoder **");
     for (i = 0; i < nb_output_streams; i++) {
         ost = output_streams[i];
         if (ost->encoding_needed) {
             AVCodec      *codec = ost->enc;
             AVCodecContext *dec = NULL;
-            LOGI("ffmpegentry in line:2857");
             if ((ist = get_input_stream(ost)))
                 dec = ist->dec_ctx;
             if (dec && dec->subtitle_header) {
@@ -2862,7 +2854,6 @@ static int transcode_init(void)
                 ost->enc_ctx->subtitle_header = av_mallocz(dec->subtitle_header_size + 1);
                 if (!ost->enc_ctx->subtitle_header) {
                     ret = AVERROR(ENOMEM);
-                    LOGE("ffmpegentry in line:2765 ** ASS code assumes this buffer is null terminated so add extra byte. **");
                     goto dump_format;
                 }
                 memcpy(ost->enc_ctx->subtitle_header, dec->subtitle_header, dec->subtitle_header_size);
@@ -2871,24 +2862,19 @@ static int transcode_init(void)
             if (!av_dict_get(ost->encoder_opts, "threads", NULL, 0))
                 av_dict_set(&ost->encoder_opts, "threads", "auto", 0);
             av_dict_set(&ost->encoder_opts, "side_data_only_packets", "1", 0);
-            LOGI("ffmpegentry in line:2874");
             if ((ret = avcodec_open2(ost->enc_ctx, codec, &ost->encoder_opts)) < 0) {
                 if (ret == AVERROR_EXPERIMENTAL) {
-					LOGE("%s==>>%d<<<<<>>>>>>>Error while opening encoder for output stream #%d:%d - maybe incorrect parameters such as bit_rate, rate, width or height",
 							error, sizeof(error), ost->file_index, ost->index);
                     abort_codec_experimental(codec, 1);
                 }
-				LOGE("%s==>>%d<<<<<>>>>>>>Error while opening encoder for output stream #%d:%d - maybe incorrect parameters such as bit_rate, rate, width or height",
 						error, sizeof(error), ost->file_index, ost->index);
                 goto dump_format;
             }
-            LOGI("ffmpegentry in line:2885");
             if (ost->enc->type == AVMEDIA_TYPE_AUDIO &&
                 !(ost->enc->capabilities & CODEC_CAP_VARIABLE_FRAME_SIZE))
                 av_buffersink_set_frame_size(ost->filter->filter,
                                              ost->enc_ctx->frame_size);
             assert_avoptions(ost->encoder_opts);
-            LOGI("ffmpegentry in line:2891");
             if (ost->enc_ctx->bit_rate && ost->enc_ctx->bit_rate < 1000)
                 LOGW("The bitrate parameter is set too low."
                                              " It takes bits/s as argument, not kbits/s\n");
@@ -2898,9 +2884,7 @@ static int transcode_init(void)
                 exit_program(1);
             }
         }
-        LOGI("ffmpegentry in line:2895");
         ret = avcodec_copy_context(ost->st->codec, ost->enc_ctx);
-        LOGI("ffmpegentry in line:2897 avcodec_copy_context(ost->st->codec, ost->enc_ctx)-->>ret=%d", ret);
         if (ret < 0) {
            LOGE("Error initializing the output stream codec context.\n");
             exit_program(1);
@@ -2912,7 +2896,6 @@ static int transcode_init(void)
     }
 
     /* init input streams */
-    LOGI("ffmpegentry in line:2907 transcode_init()-->>for (i = 0; i < nb_input_streams; i++)==>>** init input streams **");
     for (i = 0; i < nb_input_streams; i++)
         if ((ret = init_input_stream(i, error, sizeof(error))) < 0) {
             for (i = 0; i < nb_output_streams; i++) {
@@ -2923,7 +2906,6 @@ static int transcode_init(void)
         }
 
     /* discard unused programs */
-    LOGI("ffmpegentry in line:2918 transcode_init()-->>for (i = 0; i < nb_input_files; i++)==>>** discard unused programs **");
     for (i = 0; i < nb_input_files; i++) {
         InputFile *ifile = input_files[i];
         for (j = 0; j < ifile->ctx->nb_programs; j++) {
@@ -2940,7 +2922,6 @@ static int transcode_init(void)
     }
 
     /* open files and write file headers */
-    LOGI("ffmpegentry in line:2935 transcode_init()-->>for (i = 0; i < nb_output_files; i++)==>>** open files and write file headers **");
     for (i = 0; i < nb_output_files; i++) {
         oc = output_files[i]->ctx;
         oc->interrupt_callback = int_cb;
@@ -3660,9 +3641,7 @@ static int transcode(void)
     int64_t timer_start;
 
     ret = transcode_init();
-    LOGI("ffmpegentry in line:3663 trancode_init() finished==>>>ret---->>%d", ret);
     if (ret < 0) {
-    	LOGE("ffmpegentry in line:3665, Error transcode_init() ret====>>>%d", ret);
         goto fail;
     }
 
@@ -3845,27 +3824,20 @@ int main(int argc, char **argv)
     term_init();
 
     /* parse options and open all input/output files */
-    LOGW("ffmpeg_parse_options(argc, argv) in main line:3828");
     ret = ffmpeg_parse_options(argc, argv);
-    LOGW("ffmpeg_parse_options(argc, argv)==>>ret==>>%d", ret);
     if (ret < 0) {
-    	LOGE("ffmpegentry.c in main() line:3830 error==>ffmpeg_parse_options(argc, argv) ret < 0-->>ret=%d", ret);
     	return 1;
 //        exit_program(1);
     }
 
-    LOGW("if (nb_output_files <= 0 && nb_input_files == 0) in main() line:3836");
     if (nb_output_files <= 0 && nb_input_files == 0) {
         show_usage();
-        LOGW("Use -h to get full help or, even better, run 'man %s'\n", program_name);
         return 1;
 //        exit_program(1);
     }
 
     /* file converter / grab */
-    LOGW("if (nb_output_files <= 0) in main() line:3845");
     if (nb_output_files <= 0) {
-        LOGE("At least one output file must be specified\n");
         return 1;
 //        exit_program(1);
     }
@@ -3876,21 +3848,17 @@ int main(int argc, char **argv)
 //     }
 
     current_time = ti = getutime();
-    LOGW("if (ret = transcode() < 0) in main() line:3858");
     if (ret = transcode() < 0) {
-    	LOGE("ffmpegentry.c in main() line:3856 error==>transcode() ret < 0-->>ret=%d", ret);
     	return 1;
 //        exit_program(1);
     }
     ti = getutime() - ti;
-    LOGW("if (do_benchmark) in main() line:3865");
     if (do_benchmark) {
         LOGI("bench: utime=%0.3fs\n", ti / 1000000.0);
     }
     LOGDG("%"PRIu64" frames successfully decoded, %"PRIu64" decoding errors\n",
            decode_error_stat[0], decode_error_stat[1]);
     if ((decode_error_stat[0] + decode_error_stat[1]) * max_error_rate < decode_error_stat[1]) {
-    	LOGE("ffmpegentry.c in main() line:3867 error==>decode_error_stat[0] + decode_error_stat[1]) * max_error_rate < decode_error_stat[1]");
     	return 69;
 //        exit_program(69);
     }
